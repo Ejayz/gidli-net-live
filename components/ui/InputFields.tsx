@@ -22,7 +22,7 @@ export function TextInput({
 }) {
   return (
     <div className="form-control">
-      <label className={`label ${values ? "block" : "hidden"}`}>
+      <label className={`label ${values ? "block" : "invisible"}`}>
         <span className="label-text">{label}</span>
       </label>
       <input
@@ -66,7 +66,7 @@ export function PasswordInput({
 
   return (
     <div className="form-control">
-      <label className={`label ${values ? "block" : "hidden"}`}>
+      <label className={`label ${values ? "block" : "invisible"}`}>
         <span className="label-text">{label}</span>
       </label>
       <div
@@ -132,7 +132,7 @@ export function EmailInput({
   
   return (
     <div className="form-control">
-      <label className={`label ${values ? "block" : "hidden"}`}>
+      <label className={`label ${values ? "block" : "invisible"}`}>
         <span className="label-text">{label}</span>
       </label>
       <div

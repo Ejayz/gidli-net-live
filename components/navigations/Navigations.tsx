@@ -1,4 +1,5 @@
 import { Moirai_One } from "next/font/google";
+import { JSX } from "react";
 
 const moiraiOne = Moirai_One({
   subsets: ["latin"],
@@ -95,7 +96,9 @@ export function Drawer({ ui }: { ui: React.ReactNode }) {
           <div className="hidden flex-1 navbar-end  lg:block">
             <ul className="menu menu-horizontal">
               <li>
-                <a className="btn btn-primary btn-outline">Login</a>
+                <a href="/login" className="btn btn-primary btn-outline">
+                  Login
+                </a>
               </li>
             </ul>
           </div>
@@ -152,6 +155,18 @@ export const Main = () => {
           </div>
         </div>
       </div>
+    </main>
+  );
+};
+
+export const ContentContianer = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  return (
+    <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start font-mono">
+      <div className="hero bg-base-200 min-h-screen">{children}</div>
     </main>
   );
 };
